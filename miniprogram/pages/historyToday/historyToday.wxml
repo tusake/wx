@@ -1,0 +1,12 @@
+<view class="image">
+  <image wx:if="{{flag == 0}}"  src="../../images/微信图片_20200903151548.jpg" ></image>
+</view>
+<text class="nowDate">今日是：{{nowDate}}</text>
+<button bindtap="callFunction" type="primary">查看历史上的今天</button>
+<van-cell-group wx:if="{{flag ==1}}" wx:for="{{historyData}}" wx:key="index">
+  <van-cell center title="{{item.year}}年" value="{{nowDate}}" label="{{item.title}}" border="{{ false }}" />
+</van-cell-group>
+<view class="image">
+  <image wx:if="{{flag == 0}}" src="../../images/微信图片_20200903154337.jpg" ></image>
+</view>
+

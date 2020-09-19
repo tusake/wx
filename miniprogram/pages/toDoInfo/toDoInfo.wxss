@@ -1,0 +1,5 @@
+/* pages/toDoInfo/toDoInfo.wxss */
+.img {
+  display: flex;
+  justify-content: center;
+}

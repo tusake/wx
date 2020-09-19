@@ -1,0 +1,12 @@
+<van-cell-group>
+  <!-- 表格区 -->
+  <van-cell title="{{task.title}}" border="{{false}}" value="{{task.status==='进行中'?'进行中':'已完成'}}"/>
+   <van-cell wx:v-if="{{task.location}}" title="位置" icon="location" bind:click="viewLocation" border="{{false}}" value="{{task.location.name}}"/>
+   <!-- 页面区 -->
+   <view class="img">
+   <image wx:if="{{task.image}}" src="{{task.image}}"></image>
+   </view>
+</van-cell-group>
+<!-- 最下边为两个按钮 -->
+<button type="primary" bindtap="finishTask">完成任务</button>
+<button bindtap="deleteTask">删除此项</button>

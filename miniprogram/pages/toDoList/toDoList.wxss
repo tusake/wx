@@ -1,0 +1,17 @@
+
+.imageButton{
+  background-color:#ffd662 ;
+  color:grey;
+}
+.locatButton{
+  color:#e3deca;
+  background-color:#45be93 ;
+}
+.submitButton{
+  color:white;
+  background-color: #288692;
+}
+.img {
+  display: flex;
+  justify-content: center;
+}

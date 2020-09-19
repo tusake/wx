@@ -1,0 +1,26 @@
+<!-- 上半页面就是一张表单用来提交数据 -->
+<form bindsubmit="onSubmit">
+	<!-- 输入框 -->
+	<van-search background="#f3fee7" name="title" input-align="center" placeholder="请输入代办事件" />
+	<!-- 选择图片按钮 -->
+	<button bindtap="selectImage" class="imageButton">选择图片</button>
+	<block wx-if="{{image}}">
+		<view class="img">
+			<image src="{{image}}"></image>
+		</view>
+	</block>
+	<!-- 选择位置按钮 -->
+	<button bindtap="chooseLocation" class="locatButton">选择位置</button>
+	<button form-type="submit" class="submitButton">添加</button>
+</form>
+
+<!-- 下半页面为List内容区域 -->
+<van-cell-group>
+	<block wx:for="{{tasks}}" wx:key="index">
+		<view wx-if="{{item.title}}">
+			<navigator url='../toDoInfo/toDoInfo?id={{item._id}}'>
+				<van-cell title="{{item.title}}" label="{{item.location.address}}" value="{{item.status}}" class="mainContent" />
+			</navigator>
+		</view>
+	</block>
+</van-cell-group>

@@ -1,0 +1,103 @@
+<!-- pages/weather/weather.wxml -->
+<button bindtap="chooselocation" type="primary">选择位置</button>
+<van-cell-group wx:if="{{address !=null }}" space="nbsp">
+	<van-cell title="{{address}}" value="{{weather}}" icon="location-o" />
+</van-cell-group>
+
+<view wx:if="{{number==null}}">
+	<van-cell title="您未选择城市" value="请先选择位置" />
+	<van-cell title="我还知不道" value="莫知道级数" />
+	<van-cell title="污染指数不知道" value="人人环保尽份力" />
+	<view class="img">
+		<image src="../../images/微信图片_20200913110058.jpg" />
+	</view>
+</view>
+<view wx:if="{{number==0}}">
+	<van-cell title="温度" value="30℃" />
+	<van-cell title="风速" value="1级" />
+	<van-cell title="污染指数" value="59" />
+	<view class="img">
+		<image src="../../images/晴.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==1}}">
+	<van-cell title="温度" value="28℃" />
+	<van-cell title="风速" value="2级" />
+	<van-cell title="污染指数" value="52" />
+	<view class="img">
+		<image src="../../images/多云.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==2}}">
+	<van-cell title="温度" value="22℃" />
+	<van-cell title="风速" value="1级" />
+	<van-cell title="污染指数" value="23" />
+	<view class="img">
+		<image src="../../images/小雨.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==3}}">
+	<van-cell title="温度" value="21℃" />
+	<van-cell title="风速" value="2级" />
+	<van-cell title="污染指数" value="22" />
+	<view class="img">
+		<image src="../../images/中雨.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==4}}">
+	<van-cell title="温度" value="20℃" />
+	<van-cell title="风速" value="3级" />
+	<van-cell title="污染指数" value="19" />
+	<view class="img">
+		<image src="../../images/大雨.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==5}}">
+	<van-cell title="温度" value="18℃" />
+	<van-cell title="风速" value="4级" />
+	<van-cell title="污染指数" value="18" />
+	<view class="img">
+		<image src="../../images/雷阵雨.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==6}}">
+	<van-cell title="温度" value="27℃" />
+	<van-cell title="风速" value="6级" />
+	<van-cell title="污染指数" value="25" />
+	<view class="img">
+		<image src="../../images/大风.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==7}}">
+	<van-cell title="温度" value="2℃" />
+	<van-cell title="风速" value="1级" />
+	<van-cell title="污染指数" value="49" />
+	<view class="img">
+		<image src="../../images/小雪.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==8}}">
+	<van-cell title="温度" value="0℃" />
+	<van-cell title="风速" value="2级" />
+	<van-cell title="污染指数" value="44" />
+	<view class="img">
+		<image src="../../images/中雪.jpg"></image>
+	</view>
+</view>
+
+<view wx:if="{{number==9}}">
+	<van-cell title="温度" value="-3℃" />
+	<van-cell title="风速" value="3级" />
+	<van-cell title="污染指数" value="5945" />
+	<view class="img">
+		<image src="../../images/大雪.jpg"></image>
+	</view>
+</view>

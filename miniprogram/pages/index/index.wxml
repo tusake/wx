@@ -1,0 +1,36 @@
+  <view  class="img">
+	<image src="../../images/微信图片_20200903151548.jpg" class="mainTop"></image>
+	</view>
+  <div class="bottomContent">
+  	<!-- 用来放日期 -->
+  	<div id="div1">
+  		<van-row class="todayIs">
+  			<van-col span="12" offset="10">今:</van-col>
+  		</van-row>
+  		<van-row class="nowDate">
+  			<van-col span="12" offset="3">{{nowDate}}</van-col>
+  		</van-row>
+      <van-row class="detailInfo">
+  			<van-col span="12" offset="3">忌懒觉，宜运动</van-col>
+  		</van-row>
+  	</div>
+		<!-- 用来放照片 -->
+		  <view  class="img">
+  		<image src="../../images/微信图片_20200903154119.jpg" id="div2"></image>
+			</view>
+  </div> 
+  <!-- 下边是跳转链接的三个界面 -->
+  <div class="icon">
+  	<span class="weatherSpan">
+  		<navigator url="../weather/weather"><van-icon name="fire" size="2rem" class="weatherIcon" /></navigator>
+  		<navigator url="../weather/weather" id="text1">今日天气</navigator>
+  	</span>
+  	<span class="todoSpan">
+  		<navigator url="../toDoList/toDoList"><van-icon name="add" size="3rem" class="todoIcon"/></navigator>
+  		<navigator url="../toDoList/toDoList" id="text2">todo</navigator>
+  	</span>
+  	<span class="historySpan">
+      <navigator url="../historyToday/historyToday"><van-icon name="graphic" size="2rem" class="historyIcon" /></navigator>
+  		<navigator url="../historyToday/historyToday" id="text3">历史上的今天</navigator>
+  	</span>
+  </div>
